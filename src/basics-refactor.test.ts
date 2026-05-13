@@ -453,14 +453,9 @@ describe("Problema d'intersecció de tipus", () => {
     title: string;
     body: string;
   }
-
-  const getDefaultUserAndPosts = (): {
-    id: string;
-    firstName: string;
-    lastName: string;
-    posts: Post[];
-  } => {
-    return {
+ 
+  const getDefaultUserAndPosts = (): User & { posts: Post[]} => {
+     return {
       id: "1",
       firstName: "Jen",
       lastName: "Simmons",
